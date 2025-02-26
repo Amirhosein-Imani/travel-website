@@ -123,3 +123,50 @@ ScrollReveal().reveal(".explore__grid div" , {
     duration: 1000 , delay: 2500 , interval: 500 ,
 
 });
+
+
+
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+
+const clientCards = Array.from(document.querySelectorAll(".client__card"));
+
+next.addEventListener("click" , (e) => {
+
+    for (let index = 0; index < clientCards.length; index++) {
+
+        if (clientCards[index].classList.contains("active")) {
+            
+            const nextIndex = (index + 1) % clientCards.length;
+
+            clientCards[index].classList.remove("active");
+
+            clientCards[nextIndex].classList.add("active");
+
+            break;
+
+        }
+        
+    }
+
+});
+
+prev.addEventListener("click" , (e) => {
+
+    for (let index = 0; index < clientCards.length; index++) {
+
+        if (clientCards[index].classList.contains("active")) {
+            
+            const prevIndex = (index - 1 + clientCards.length) % clientCards.length;
+
+            clientCards[index].classList.remove("active");
+
+            clientCards[prevIndex].classList.add("active");
+
+            break;
+
+        }
+        
+    }
+
+});
