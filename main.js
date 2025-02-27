@@ -170,3 +170,23 @@ prev.addEventListener("click" , (e) => {
     }
 
 });
+
+
+
+ScrollReveal().reveal(".subscribe__container .section__header" , {
+
+    ...scrollRevealOption ,  
+
+});
+
+ScrollReveal().reveal(".subscribe__container .section__description" , {
+
+    ...scrollRevealOption , delay: 500 ,
+
+});
+
+ScrollReveal().reveal(".subscribe__container form" , {
+
+    ...scrollRevealOption , delay: 1000 ,
+
+});
